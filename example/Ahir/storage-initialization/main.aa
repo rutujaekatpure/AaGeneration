@@ -1,0 +1,61 @@
+// Aa code produced by llvm2aa (version 2.0)
+$storage t:$uint<32>
+$module [t_initializer_in_mainx_xbc] $in () $out () $is {
+t := _b00000000000000000000000000000101
+$attribute nooptimize 
+}
+$storage g:$array [2] $of $uint<32>
+$module [g_initializer_in_mainx_xbc] $in () $out () $is {
+g[0] := _b00000000000000000000000000000001
+g[1] := _b00000000000000000000000000000001
+$attribute nooptimize 
+}
+$storage f:$array [2] $of $array [2] $of $uint<32>
+$module [f_initializer_in_mainx_xbc] $in () $out () $is {
+f[0][0] := _b00000000000000000000000000000001
+f[0][1] := _b00000000000000000000000000000001
+f[1][0] := _b00000000000000000000000000000001
+f[1][1] := _b00000000000000000000000000000001
+$attribute nooptimize 
+}
+$module [mainx_xbc_storage_initializer_] $in () $out () $is {
+$parallelblock [pb] { 
+$call t_initializer_in_mainx_xbc () () 
+$call g_initializer_in_mainx_xbc () () 
+$call f_initializer_in_mainx_xbc () () 
+}
+$attribute initializer
+}
+$module [main] 
+ $in ()
+ $out (ret_val__ : $uint<32>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<32>
+$storage iNsTr_1_alloc : $uint<32>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+->(iNsTr_0) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+// load 
+iNsTr_3 := @(g[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ])
+// load 
+iNsTr_4 := @(g[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ])
+iNsTr_5 := (iNsTr_3 + iNsTr_4)
+// load 
+iNsTr_6 := @(f[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ])
+iNsTr_7 := (iNsTr_5 + iNsTr_6)
+// load 
+iNsTr_8 := @(f[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ])
+iNsTr_9 := (iNsTr_7 + iNsTr_8)
+// load 
+iNsTr_10 := t
+iNsTr_11 := (iNsTr_9 + iNsTr_10)
+->(iNsTr_1) := iNsTr_11
+// load 
+ret_val__ := ->(iNsTr_1) 
+$place [return__]
+$merge return__ $endmerge
+}
+}

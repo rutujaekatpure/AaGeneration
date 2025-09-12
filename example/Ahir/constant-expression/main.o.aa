@@ -1,0 +1,48 @@
+// Aa code produced by llvm2aa (version 1.0)
+$storage g:$array [10] $of $uint<32>
+$module [cpy] 
+$in (a : $pointer< $uint<32> > )
+$out ()
+$is 
+{
+  $branchblock [body] 
+  {
+    //begin: basic-block entry
+    $storage ax_xaddr_alloc : $pointer< $uint<32> >
+    ax_xaddr := @(ax_xaddr_alloc)
+    ->(ax_xaddr) := a
+    // load 
+    tmp := ->(ax_xaddr) 
+    // load 
+    tmp1 := ->(tmp) 
+    // load 
+    tmp2 := ->(ax_xaddr) 
+    addx_xptr := tmp2[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ]
+    ->(addx_xptr) := tmp1
+    $place [return__]
+    $merge return__ $endmerge
+  }
+}
+$module [main] 
+$in (a : $uint<32> )
+$out (ret_val__ : $uint<32>)
+$is 
+{
+  $branchblock [body] 
+  {
+    //begin: basic-block entry
+    $storage retval_alloc : $uint<32>
+    $storage ax_xaddr_alloc : $uint<32>
+    retval := @(retval_alloc)
+    ax_xaddr := @(ax_xaddr_alloc)
+    ->(retval) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+    ->(ax_xaddr) := a
+    iNsTr_2 := @(g[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ])
+    $call cpy (iNsTr_2 )  ()
+    iNsTr_4 := @(g[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ])
+    // load 
+    ret_val__ := ->(iNsTr_4) 
+    $place [return__]
+    $merge return__ $endmerge
+  }
+}

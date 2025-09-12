@@ -1,0 +1,78 @@
+// Aa code produced by llvm2aa (version 2.0)
+$module [mul] 
+ $in (xx_x0 : $float<8,23> xx_x1 : $float<8,23> )
+ $out (ret_val__ : $float<8,23>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $float<8,23>
+$storage iNsTr_1_alloc : $float<8,23>
+$storage iNsTr_2_alloc : $float<8,23>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+->(iNsTr_0) := xx_x0
+->(iNsTr_1) := xx_x1
+// load 
+iNsTr_5 := ->(iNsTr_0) 
+// load 
+iNsTr_6 := ->(iNsTr_1) 
+iNsTr_7 := (iNsTr_5 * iNsTr_6)
+->(iNsTr_2) := iNsTr_7
+// load 
+ret_val__ := ->(iNsTr_2) 
+$place [return__]
+$merge return__ $endmerge
+}
+}
+$module [main] 
+ $in ()
+ $out (ret_val__ : $uint<32>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<32>
+$storage iNsTr_1_alloc : $float<8,23>
+$storage iNsTr_2_alloc : $float<8,23>
+$storage iNsTr_3_alloc : $float<8,23>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+iNsTr_3 := @(iNsTr_3_alloc)
+->(iNsTr_0) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+$call mul (( $bitcast ($float<8,23> ) _f5.300000e+00 )  ( $bitcast ($float<8,23> ) _f2.500000e+00 )  )  (iNsTr_5)
+->(iNsTr_1) := iNsTr_5
+->(iNsTr_2) := ( $bitcast ($float<8,23> ) _h7f800000 ) 
+// load 
+iNsTr_8 := ->(iNsTr_1) 
+// load 
+iNsTr_9 := ->(iNsTr_2) 
+$call mul (iNsTr_8 iNsTr_9 )  (iNsTr_10)
+->(iNsTr_3) := iNsTr_10
+// load 
+iNsTr_12 := ->(iNsTr_1) 
+iNsTr_13 := ($cast ($float<11,52>) iNsTr_12)
+// compare instruction
+iNsTr_14 := (iNsTr_13 == ( $bitcast ($float<11,52> ) _f1.325000e+01 )  )
+$if iNsTr_14 $then  $place [bb_0_bb_1] $else $place [bb_0_bb_2] $endif 
+//begin: basic-block bb_1
+$merge bb_0_bb_1
+$endmerge
+->(iNsTr_0) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) 
+$place [bb_1_bb_3]
+//begin: basic-block bb_2
+$merge bb_0_bb_2
+$endmerge
+->(iNsTr_0) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+$place [bb_2_bb_3]
+//begin: basic-block bb_3
+$merge bb_1_bb_3 bb_2_bb_3
+$endmerge
+// load 
+ret_val__ := ->(iNsTr_0) 
+$place [return__]
+$merge return__ $endmerge
+}
+}

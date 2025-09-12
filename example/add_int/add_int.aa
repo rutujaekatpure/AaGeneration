@@ -1,0 +1,105 @@
+// Aa code produced by llvm2aa (version 2.0)
+$storage g:$uint<32>
+$module [g_initializer_in_add_intx_xbc] $in () $out () $is {
+g := _b00000000000000000000000000000010
+$attribute nooptimize 
+}
+$storage f:$array [2] $of $array [2] $of $uint<32>
+$module [f_initializer_in_add_intx_xbc] $in () $out () $is {
+f[0][0] := _b00000000000000000000000000000001
+f[0][1] := _b00000000000000000000000000000101
+f[1][0] := _b00000000000000000000000000001000
+f[1][1] := _b00000000000000000000000000000010
+$attribute nooptimize 
+}
+$storage test:$array [2] $of $array [3] $of $array [4] $of $uint<32>
+$module [test_initializer_in_add_intx_xbc] $in () $out () $is {
+test[0][0][0] := _b00000000000000000000000000000011
+test[0][0][1] := _b00000000000000000000000000000100
+test[0][0][2] := _b00000000000000000000000000000010
+test[0][0][3] := _b00000000000000000000000000000011
+test[0][1][1] := _b11111111111111111111111111111101
+test[0][1][2] := _b00000000000000000000000000001001
+test[0][1][3] := _b00000000000000000000000000001011
+test[0][2][0] := _b00000000000000000000000000010111
+test[0][2][1] := _b00000000000000000000000000001100
+test[0][2][2] := _b00000000000000000000000000010111
+test[0][2][3] := _b00000000000000000000000000000010
+test[1][0][0] := _b00000000000000000000000000001101
+test[1][0][1] := _b00000000000000000000000000000100
+test[1][0][2] := _b00000000000000000000000000111000
+test[1][0][3] := _b00000000000000000000000000000011
+test[1][1][0] := _b00000000000000000000000000000101
+test[1][1][1] := _b00000000000000000000000000001001
+test[1][1][2] := _b00000000000000000000000000000011
+test[1][1][3] := _b00000000000000000000000000000101
+test[1][2][0] := _b00000000000000000000000000000011
+test[1][2][1] := _b00000000000000000000000000000001
+test[1][2][2] := _b00000000000000000000000000000100
+test[1][2][3] := _b00000000000000000000000000001001
+$attribute nooptimize 
+}
+$module [add_intx_xbc_storage_initializer_] $in () $out () $is {
+$parallelblock [pb] { 
+$call g_initializer_in_add_intx_xbc () () 
+$call f_initializer_in_add_intx_xbc () () 
+$call test_initializer_in_add_intx_xbc () () 
+}
+$attribute initializer
+}
+$module [main] 
+ $in ()
+ $out (ret_val__ : $uint<32>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<32>
+$storage iNsTr_1_alloc : $uint<32>
+$storage iNsTr_2_alloc : $uint<32>
+$storage iNsTr_3_alloc : $uint<32>
+$storage iNsTr_4_alloc : $uint<32>
+$storage iNsTr_5_alloc : $uint<32>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+iNsTr_3 := @(iNsTr_3_alloc)
+iNsTr_4 := @(iNsTr_4_alloc)
+iNsTr_5 := @(iNsTr_5_alloc)
+->(iNsTr_0) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+// load 
+iNsTr_7 := @(test[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ])
+->(iNsTr_1) := iNsTr_7
+// load 
+iNsTr_9 := @(test[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ])
+->(iNsTr_2) := iNsTr_9
+// load 
+iNsTr_11 := @(test[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ])
+->(iNsTr_3) := iNsTr_11
+// load 
+iNsTr_13 := @(test[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ])
+->(iNsTr_4) := iNsTr_13
+// load 
+iNsTr_15 := ->(iNsTr_1) 
+// load 
+iNsTr_16 := ->(iNsTr_2) 
+iNsTr_17 := (iNsTr_15 + iNsTr_16)
+// load 
+iNsTr_18 := ->(iNsTr_3) 
+iNsTr_19 := (iNsTr_17 + iNsTr_18)
+// load 
+iNsTr_20 := ->(iNsTr_4) 
+iNsTr_21 := (iNsTr_19 + iNsTr_20)
+// load 
+iNsTr_22 := @(f[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ][( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ])
+iNsTr_23 := (iNsTr_21 + iNsTr_22)
+// load 
+iNsTr_24 := g
+iNsTr_25 := (iNsTr_23 + iNsTr_24)
+->(iNsTr_5) := iNsTr_25
+// load 
+ret_val__ := ->(iNsTr_1) 
+$place [return__]
+$merge return__ $endmerge
+}
+}

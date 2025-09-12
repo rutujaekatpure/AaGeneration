@@ -1,0 +1,42 @@
+// Aa code produced by llvm2aa (version 2.0)
+$pipe in_data : $uint<64> $depth 1
+$pipe out_data : $uint<64> $depth 1
+$module [power] 
+ $in (xx_xx_x1 : $uint<64> xx_xx_x2 : $uint<64> )
+ $out (ret_val__ : $uint<64>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block vars
+xx_x6 := in_data
+$barrier 
+$place [vars_while]
+//begin: basic-block while
+//   this is a do-while loop.
+$merge vars_while
+$phi yx_x0_at_entry :=  ( $cast ($uint<64>) xx_x2) $on vars_while 
+$phi resultx_x0_at_entry :=  ( $cast ($uint<64>) xx_x6) $on vars_while 
+$endmerge
+$dopipeline $depth 10 $buffering 13 
+$fullrate
+$merge $entry $loopback
+$phi yx_x0 :=  ( $cast ($uint<64>) xx_x17) $on $loopback yx_x0_at_entry $on $entry
+$phi resultx_x0 :=  ( $cast ($uint<64>) ret_val__) $on $loopback resultx_x0_at_entry $on $entry
+$endmerge
+ret_val__ := (resultx_x0 * xx_x1)
+xx_x17 := (yx_x0 + ( $bitcast ($uint<64> ) _b1111111111111111111111111111111111111111111111111111111111111111 ) )
+// compare instruction
+xx_x20 := ( ($bitcast ( $int<64>) xx_x17) <   ($bitcast ( $int<64>) ( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 )  ) )
+while_while_out_taken := xx_x20
+$while (~xx_x20)
+$if while_while_out_taken $then 
+  $place [while_while_out]
+$endif
+//begin: basic-block while_out
+$merge while_while_out
+$endmerge
+out_data := xx_x1
+$place [return__]
+$merge return__ $endmerge
+}
+}

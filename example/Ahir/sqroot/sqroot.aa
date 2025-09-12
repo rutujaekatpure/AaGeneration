@@ -1,0 +1,150 @@
+// Aa code produced by llvm2aa (version 2.0)
+$module [sqrootx_xbc_storage_initializer_] $in () $out () $is {
+$null
+$attribute initializer
+}
+$module [sqroot] 
+ $in (xx_x0 : $float<8,23> )
+ $out (ret_val__ : $float<8,23>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $float<8,23>
+$storage iNsTr_1_alloc : $uint<32>
+$storage iNsTr_2_alloc : $float<8,23>
+$storage iNsTr_3_alloc : $float<8,23>
+$storage iNsTr_4_alloc : $float<8,23>
+$storage iNsTr_5_alloc : $float<8,23>
+$storage iNsTr_6_alloc : $float<8,23>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+iNsTr_3 := @(iNsTr_3_alloc)
+iNsTr_4 := @(iNsTr_4_alloc)
+iNsTr_5 := @(iNsTr_5_alloc)
+iNsTr_6 := @(iNsTr_6_alloc)
+->(iNsTr_0) := xx_x0
+->(iNsTr_2) := ( $bitcast ($float<8,23> ) _h0 ) 
+->(iNsTr_3) := ( $bitcast ($float<8,23> ) _h0 ) 
+->(iNsTr_4) := ( $bitcast ($float<8,23> ) _h0 ) 
+->(iNsTr_5) := ( $bitcast ($float<8,23> ) _h0 ) 
+->(iNsTr_6) := ( $bitcast ($float<8,23> ) _f1.000000e-04 ) 
+$call global_storage_initializer_ ()  ()
+// load 
+iNsTr_14 := ->(iNsTr_0) 
+iNsTr_15 := ($cast ($float<11,52>) iNsTr_14)
+// compare instruction
+iNsTr_16 := (iNsTr_15 > ( $bitcast ($float<11,52> ) _f1.000000e+00 )  )
+$if iNsTr_16 $then  $place [bb_0_bb_1] $else $place [bb_0_bb_2] $endif 
+//begin: basic-block bb_1
+$merge bb_0_bb_1
+$endmerge
+// load 
+iNsTr_18 := ->(iNsTr_0) 
+->(iNsTr_2) := iNsTr_18
+->(iNsTr_3) := ( $bitcast ($float<8,23> ) _h0 ) 
+$place [bb_1_bb_3]
+//begin: basic-block bb_2
+$merge bb_0_bb_2
+$endmerge
+->(iNsTr_2) := ( $bitcast ($float<8,23> ) _f1.000000e+00 ) 
+// load 
+iNsTr_23 := ->(iNsTr_0) 
+->(iNsTr_3) := iNsTr_23
+$place [bb_2_bb_3]
+//begin: basic-block bb_3
+$merge bb_1_bb_3 bb_2_bb_3
+$endmerge
+->(iNsTr_1) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+$place [bb_3_bb_4]
+//begin: basic-block bb_4
+$merge bb_3_bb_4 bb_9_bb_4
+$endmerge
+// load 
+iNsTr_28 := ->(iNsTr_1) 
+// compare instruction
+iNsTr_29 := ( ($bitcast ( $int<32>) iNsTr_28) <   ($bitcast ( $int<32>) ( $bitcast ($uint<32> ) _b00000000000000000000000000001101 )  ) )
+$if iNsTr_29 $then  $place [bb_4_bb_5] $else $place [bb_4_bb_10] $endif 
+//begin: basic-block bb_5
+$merge bb_4_bb_5
+$endmerge
+// load 
+iNsTr_31 := ->(iNsTr_2) 
+// load 
+iNsTr_32 := ->(iNsTr_3) 
+iNsTr_33 := (iNsTr_31 + iNsTr_32)
+iNsTr_34 := ($cast ($float<11,52>) iNsTr_33)
+iNsTr_35 := (iNsTr_34 * ( $bitcast ($float<11,52> ) _f5.000000e-01 ) )
+iNsTr_36 := ($cast ($float<8,23>) iNsTr_35)
+->(iNsTr_4) := iNsTr_36
+// load 
+iNsTr_38 := ->(iNsTr_4) 
+// load 
+iNsTr_39 := ->(iNsTr_4) 
+iNsTr_40 := (iNsTr_38 * iNsTr_39)
+->(iNsTr_5) := iNsTr_40
+// load 
+iNsTr_42 := ->(iNsTr_5) 
+// load 
+iNsTr_43 := ->(iNsTr_0) 
+// compare instruction
+iNsTr_44 := (iNsTr_42 < iNsTr_43 )
+$if iNsTr_44 $then  $place [bb_5_bb_6] $else $place [bb_5_bb_7] $endif 
+//begin: basic-block bb_6
+$merge bb_5_bb_6
+$endmerge
+// load 
+iNsTr_48 := ->(iNsTr_4) 
+->(iNsTr_3) := iNsTr_48
+$place [bb_6_bb_8]
+//begin: basic-block bb_7
+$merge bb_5_bb_7
+$endmerge
+// load 
+iNsTr_51 := ->(iNsTr_4) 
+->(iNsTr_2) := iNsTr_51
+$place [bb_7_bb_8]
+//begin: basic-block bb_8
+$merge bb_6_bb_8 bb_7_bb_8
+$endmerge
+$place [bb_8_bb_9]
+//begin: basic-block bb_9
+$merge bb_8_bb_9
+$endmerge
+// load 
+iNsTr_55 := ->(iNsTr_1) 
+iNsTr_56 := (iNsTr_55 + ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+->(iNsTr_1) := iNsTr_56
+$place [bb_9_bb_4]
+//begin: basic-block bb_10
+$merge bb_4_bb_10
+$endmerge
+// load 
+ret_val__ := ->(iNsTr_4) 
+$place [return__]
+$merge return__ $endmerge
+}
+}
+$module [main] 
+ $in ()
+ $out (ret_val__ : $uint<32>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<32>
+$storage iNsTr_1_alloc : $float<8,23>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+->(iNsTr_0) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+->(iNsTr_1) := ( $bitcast ($float<8,23> ) _f3.000000e+00 ) 
+// load 
+iNsTr_4 := ->(iNsTr_1) 
+$call sqroot (iNsTr_4 )  (iNsTr_5)
+->(iNsTr_1) := iNsTr_5
+ret_val__ := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+$place [return__]
+$merge return__ $endmerge
+}
+}

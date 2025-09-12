@@ -1,0 +1,35 @@
+// Aa code produced by llvm2aa (version 1.0)
+$storage g:$array [10] $of $uint<32>
+$module [cpy] 
+$in (a : $pointer< $uint<32> > )
+$out ()
+$is 
+{
+  $branchblock [body] 
+  {
+    //begin: basic-block entry
+    // load 
+    tmp1 := ->(a) 
+    addx_xptr := a[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ]
+    ->(addx_xptr) := tmp1
+    $place [return__]
+    $merge return__ $endmerge
+  }
+}
+$module [main] 
+$in (a : $uint<32> )
+$out (ret_val__ : $uint<32>)
+$is 
+{
+  $branchblock [body] 
+  {
+    //begin: basic-block entry
+    iNsTr_0 := @(g[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000000 ) ])
+    // load 
+    ret_val__ := ->(iNsTr_0) 
+    iNsTr_1 := @(g[( $bitcast ($uint<64> ) _b0000000000000000000000000000000000000000000000000000000000000001 ) ])
+    ->(iNsTr_1) := ret_val__
+    $place [return__]
+    $merge return__ $endmerge
+  }
+}

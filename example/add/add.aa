@@ -1,0 +1,26 @@
+// Aa code produced by llvm2aa (version 2.0)
+$module [main] 
+ $in ()
+ $out (ret_val__ : i32)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : i32
+$storage iNsTr_1_alloc : i32
+$storage iNsTr_2_alloc : i32
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+->(iNsTr_0) := ( $bitcast (i32 ) _b00000000000000000000000000000000 ) 
+->(iNsTr_1) := ( $bitcast (i32 ) _b00000000000000000000000000000101 ) 
+// load 
+iNsTr_5 := ->(iNsTr_1) 
+iNsTr_6 := (iNsTr_5 + ( $bitcast (i32 ) _b00000000000000000000000000001010 ) )
+->(iNsTr_2) := iNsTr_6
+// load 
+ret_val__ := ->(iNsTr_2) 
+$place [return__]
+$merge return__ $endmerge
+}
+}

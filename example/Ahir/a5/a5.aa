@@ -1,0 +1,768 @@
+// Aa code produced by llvm2aa (version 2.0)
+$storage R1:$uint<32>
+$storage R2:$uint<32>
+$storage R3:$uint<32>
+$storage key:$array [2] $of $uint<32>
+$storage frame:$uint<32>
+$module [a5x_xbc_storage_initializer_] $in () $out () $is {
+$null
+$attribute initializer
+}
+$module [a5reg] 
+ $in ()
+ $out (ret_val__ : $uint<32>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<32>
+$storage iNsTr_1_alloc : $uint<32>
+$storage iNsTr_2_alloc : $uint<32>
+$storage iNsTr_3_alloc : $uint<32>
+$storage iNsTr_4_alloc : $uint<32>
+$storage iNsTr_5_alloc : $uint<32>
+$storage iNsTr_6_alloc : $uint<32>
+$storage iNsTr_7_alloc : $uint<32>
+$storage iNsTr_8_alloc : $uint<32>
+$storage iNsTr_9_alloc : $uint<32>
+$storage iNsTr_10_alloc : $uint<32>
+$storage iNsTr_11_alloc : $uint<32>
+$storage iNsTr_12_alloc : $uint<32>
+$storage iNsTr_13_alloc : $uint<32>
+$storage iNsTr_14_alloc : $uint<32>
+$storage iNsTr_15_alloc : $uint<32>
+$storage iNsTr_16_alloc : $uint<32>
+$storage iNsTr_17_alloc : $uint<32>
+$storage iNsTr_18_alloc : $uint<32>
+$storage iNsTr_19_alloc : $uint<32>
+$storage iNsTr_20_alloc : $uint<32>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+iNsTr_3 := @(iNsTr_3_alloc)
+iNsTr_4 := @(iNsTr_4_alloc)
+iNsTr_5 := @(iNsTr_5_alloc)
+iNsTr_6 := @(iNsTr_6_alloc)
+iNsTr_7 := @(iNsTr_7_alloc)
+iNsTr_8 := @(iNsTr_8_alloc)
+iNsTr_9 := @(iNsTr_9_alloc)
+iNsTr_10 := @(iNsTr_10_alloc)
+iNsTr_11 := @(iNsTr_11_alloc)
+iNsTr_12 := @(iNsTr_12_alloc)
+iNsTr_13 := @(iNsTr_13_alloc)
+iNsTr_14 := @(iNsTr_14_alloc)
+iNsTr_15 := @(iNsTr_15_alloc)
+iNsTr_16 := @(iNsTr_16_alloc)
+iNsTr_17 := @(iNsTr_17_alloc)
+iNsTr_18 := @(iNsTr_18_alloc)
+iNsTr_19 := @(iNsTr_19_alloc)
+iNsTr_20 := @(iNsTr_20_alloc)
+->(iNsTr_1) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+// load 
+iNsTr_22 := R1
+->(iNsTr_6) := iNsTr_22
+// load 
+iNsTr_24 := R2
+->(iNsTr_7) := iNsTr_24
+// load 
+iNsTr_26 := R3
+->(iNsTr_8) := iNsTr_26
+// load 
+iNsTr_28 := ->(iNsTr_6) 
+->(iNsTr_9) := iNsTr_28
+// load 
+iNsTr_30 := ->(iNsTr_7) 
+->(iNsTr_10) := iNsTr_30
+// load 
+iNsTr_32 := ->(iNsTr_8) 
+->(iNsTr_11) := iNsTr_32
+// load 
+iNsTr_34 := ->(iNsTr_6) 
+iNsTr_35 := (iNsTr_34 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000001000 ) )
+->(iNsTr_12) := iNsTr_35
+// load 
+iNsTr_37 := ->(iNsTr_7) 
+iNsTr_38 := (iNsTr_37 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000001010 ) )
+->(iNsTr_13) := iNsTr_38
+// load 
+iNsTr_40 := ->(iNsTr_8) 
+iNsTr_41 := (iNsTr_40 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000001010 ) )
+->(iNsTr_14) := iNsTr_41
+// load 
+iNsTr_43 := ->(iNsTr_12) 
+iNsTr_44 := (iNsTr_43 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_45 := (( $bitcast ($uint<32> ) _b00000000000000000000000000000000 )  - iNsTr_44)
+->(iNsTr_15) := iNsTr_45
+// load 
+iNsTr_47 := ->(iNsTr_13) 
+iNsTr_48 := (iNsTr_47 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_49 := (( $bitcast ($uint<32> ) _b00000000000000000000000000000000 )  - iNsTr_48)
+->(iNsTr_16) := iNsTr_49
+// load 
+iNsTr_51 := ->(iNsTr_14) 
+iNsTr_52 := (iNsTr_51 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_53 := (( $bitcast ($uint<32> ) _b00000000000000000000000000000000 )  - iNsTr_52)
+->(iNsTr_17) := iNsTr_53
+// load 
+iNsTr_55 := ->(iNsTr_16) 
+iNsTr_56 := (iNsTr_55 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+// load 
+iNsTr_57 := ->(iNsTr_17) 
+iNsTr_58 := (iNsTr_57 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+iNsTr_59 := (iNsTr_56 & iNsTr_58)
+// load 
+iNsTr_60 := ->(iNsTr_15) 
+iNsTr_61 := (iNsTr_60 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+// load 
+iNsTr_62 := ->(iNsTr_17) 
+iNsTr_63 := (iNsTr_61 & iNsTr_62)
+iNsTr_64 := (iNsTr_59 | iNsTr_63)
+// load 
+iNsTr_65 := ->(iNsTr_15) 
+// load 
+iNsTr_66 := ->(iNsTr_16) 
+iNsTr_67 := (iNsTr_65 & iNsTr_66)
+iNsTr_68 := (iNsTr_64 | iNsTr_67)
+->(iNsTr_18) := iNsTr_68
+// load 
+iNsTr_70 := ->(iNsTr_16) 
+iNsTr_71 := (iNsTr_70 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+// load 
+iNsTr_72 := ->(iNsTr_17) 
+iNsTr_73 := (iNsTr_72 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+iNsTr_74 := (iNsTr_71 & iNsTr_73)
+// load 
+iNsTr_75 := ->(iNsTr_15) 
+iNsTr_76 := (iNsTr_75 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+// load 
+iNsTr_77 := ->(iNsTr_16) 
+iNsTr_78 := (iNsTr_76 & iNsTr_77)
+iNsTr_79 := (iNsTr_74 | iNsTr_78)
+// load 
+iNsTr_80 := ->(iNsTr_15) 
+// load 
+iNsTr_81 := ->(iNsTr_17) 
+iNsTr_82 := (iNsTr_80 & iNsTr_81)
+iNsTr_83 := (iNsTr_79 | iNsTr_82)
+->(iNsTr_19) := iNsTr_83
+// load 
+iNsTr_85 := ->(iNsTr_15) 
+iNsTr_86 := (iNsTr_85 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+// load 
+iNsTr_87 := ->(iNsTr_17) 
+iNsTr_88 := (iNsTr_87 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+iNsTr_89 := (iNsTr_86 & iNsTr_88)
+// load 
+iNsTr_90 := ->(iNsTr_16) 
+iNsTr_91 := (iNsTr_90 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+// load 
+iNsTr_92 := ->(iNsTr_17) 
+iNsTr_93 := (iNsTr_91 & iNsTr_92)
+iNsTr_94 := (iNsTr_89 | iNsTr_93)
+// load 
+iNsTr_95 := ->(iNsTr_15) 
+// load 
+iNsTr_96 := ->(iNsTr_16) 
+iNsTr_97 := (iNsTr_95 & iNsTr_96)
+iNsTr_98 := (iNsTr_94 | iNsTr_97)
+->(iNsTr_20) := iNsTr_98
+// load 
+iNsTr_100 := ->(iNsTr_6) 
+iNsTr_101 := (iNsTr_100 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010010 ) )
+->(iNsTr_2) := iNsTr_101
+// load 
+iNsTr_103 := ->(iNsTr_6) 
+iNsTr_104 := (iNsTr_103 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010001 ) )
+->(iNsTr_3) := iNsTr_104
+// load 
+iNsTr_106 := ->(iNsTr_6) 
+iNsTr_107 := (iNsTr_106 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010000 ) )
+->(iNsTr_4) := iNsTr_107
+// load 
+iNsTr_109 := ->(iNsTr_6) 
+iNsTr_110 := (iNsTr_109 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000001101 ) )
+->(iNsTr_5) := iNsTr_110
+// load 
+iNsTr_112 := ->(iNsTr_2) 
+// load 
+iNsTr_113 := ->(iNsTr_3) 
+iNsTr_114 := (iNsTr_112 ^ iNsTr_113)
+->(iNsTr_2) := iNsTr_114
+// load 
+iNsTr_116 := ->(iNsTr_4) 
+// load 
+iNsTr_117 := ->(iNsTr_5) 
+iNsTr_118 := (iNsTr_116 ^ iNsTr_117)
+->(iNsTr_4) := iNsTr_118
+// load 
+iNsTr_120 := ->(iNsTr_2) 
+// load 
+iNsTr_121 := ->(iNsTr_4) 
+iNsTr_122 := (iNsTr_120 ^ iNsTr_121)
+->(iNsTr_2) := iNsTr_122
+// load 
+iNsTr_124 := ->(iNsTr_2) 
+iNsTr_125 := (iNsTr_124 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+->(iNsTr_2) := iNsTr_125
+// load 
+iNsTr_127 := ->(iNsTr_6) 
+iNsTr_128 := (iNsTr_127 << ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_129 := (iNsTr_128 & ( $bitcast ($uint<32> ) _b00000000000001111111111111111111 ) )
+->(iNsTr_6) := iNsTr_129
+// load 
+iNsTr_131 := ->(iNsTr_2) 
+// load 
+iNsTr_132 := ->(iNsTr_6) 
+iNsTr_133 := (iNsTr_132 | iNsTr_131)
+->(iNsTr_6) := iNsTr_133
+// load 
+iNsTr_135 := ->(iNsTr_7) 
+iNsTr_136 := (iNsTr_135 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010101 ) )
+->(iNsTr_2) := iNsTr_136
+// load 
+iNsTr_138 := ->(iNsTr_7) 
+iNsTr_139 := (iNsTr_138 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010100 ) )
+->(iNsTr_3) := iNsTr_139
+// load 
+iNsTr_141 := ->(iNsTr_2) 
+// load 
+iNsTr_142 := ->(iNsTr_3) 
+iNsTr_143 := (iNsTr_141 ^ iNsTr_142)
+->(iNsTr_2) := iNsTr_143
+// load 
+iNsTr_145 := ->(iNsTr_2) 
+iNsTr_146 := (iNsTr_145 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+->(iNsTr_2) := iNsTr_146
+// load 
+iNsTr_148 := ->(iNsTr_7) 
+iNsTr_149 := (iNsTr_148 << ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_150 := (iNsTr_149 & ( $bitcast ($uint<32> ) _b00000000001111111111111111111111 ) )
+->(iNsTr_7) := iNsTr_150
+// load 
+iNsTr_152 := ->(iNsTr_2) 
+// load 
+iNsTr_153 := ->(iNsTr_7) 
+iNsTr_154 := (iNsTr_153 | iNsTr_152)
+->(iNsTr_7) := iNsTr_154
+// load 
+iNsTr_156 := ->(iNsTr_8) 
+iNsTr_157 := (iNsTr_156 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010110 ) )
+->(iNsTr_2) := iNsTr_157
+// load 
+iNsTr_159 := ->(iNsTr_8) 
+iNsTr_160 := (iNsTr_159 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010101 ) )
+->(iNsTr_3) := iNsTr_160
+// load 
+iNsTr_162 := ->(iNsTr_8) 
+iNsTr_163 := (iNsTr_162 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010100 ) )
+->(iNsTr_4) := iNsTr_163
+// load 
+iNsTr_165 := ->(iNsTr_8) 
+iNsTr_166 := (iNsTr_165 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000000111 ) )
+->(iNsTr_5) := iNsTr_166
+// load 
+iNsTr_168 := ->(iNsTr_2) 
+// load 
+iNsTr_169 := ->(iNsTr_3) 
+iNsTr_170 := (iNsTr_168 ^ iNsTr_169)
+->(iNsTr_2) := iNsTr_170
+// load 
+iNsTr_172 := ->(iNsTr_4) 
+// load 
+iNsTr_173 := ->(iNsTr_5) 
+iNsTr_174 := (iNsTr_172 ^ iNsTr_173)
+->(iNsTr_4) := iNsTr_174
+// load 
+iNsTr_176 := ->(iNsTr_2) 
+// load 
+iNsTr_177 := ->(iNsTr_4) 
+iNsTr_178 := (iNsTr_176 ^ iNsTr_177)
+->(iNsTr_2) := iNsTr_178
+// load 
+iNsTr_180 := ->(iNsTr_2) 
+iNsTr_181 := (iNsTr_180 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+->(iNsTr_2) := iNsTr_181
+// load 
+iNsTr_183 := ->(iNsTr_8) 
+iNsTr_184 := (iNsTr_183 << ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_185 := (iNsTr_184 & ( $bitcast ($uint<32> ) _b00000000011111111111111111111111 ) )
+->(iNsTr_8) := iNsTr_185
+// load 
+iNsTr_187 := ->(iNsTr_2) 
+// load 
+iNsTr_188 := ->(iNsTr_8) 
+iNsTr_189 := (iNsTr_188 | iNsTr_187)
+->(iNsTr_8) := iNsTr_189
+// load 
+iNsTr_191 := ->(iNsTr_6) 
+// load 
+iNsTr_192 := ->(iNsTr_20) 
+iNsTr_193 := (iNsTr_191 & iNsTr_192)
+// load 
+iNsTr_194 := ->(iNsTr_9) 
+// load 
+iNsTr_195 := ->(iNsTr_20) 
+iNsTr_196 := (iNsTr_195 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+iNsTr_197 := (iNsTr_194 & iNsTr_196)
+iNsTr_198 := (iNsTr_193 | iNsTr_197)
+->(iNsTr_9) := iNsTr_198
+// load 
+iNsTr_200 := ->(iNsTr_7) 
+// load 
+iNsTr_201 := ->(iNsTr_18) 
+iNsTr_202 := (iNsTr_200 & iNsTr_201)
+// load 
+iNsTr_203 := ->(iNsTr_10) 
+// load 
+iNsTr_204 := ->(iNsTr_18) 
+iNsTr_205 := (iNsTr_204 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+iNsTr_206 := (iNsTr_203 & iNsTr_205)
+iNsTr_207 := (iNsTr_202 | iNsTr_206)
+->(iNsTr_10) := iNsTr_207
+// load 
+iNsTr_209 := ->(iNsTr_8) 
+// load 
+iNsTr_210 := ->(iNsTr_19) 
+iNsTr_211 := (iNsTr_209 & iNsTr_210)
+// load 
+iNsTr_212 := ->(iNsTr_11) 
+// load 
+iNsTr_213 := ->(iNsTr_19) 
+iNsTr_214 := (iNsTr_213 ^ ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) )
+iNsTr_215 := (iNsTr_212 & iNsTr_214)
+iNsTr_216 := (iNsTr_211 | iNsTr_215)
+->(iNsTr_11) := iNsTr_216
+// load 
+iNsTr_218 := ->(iNsTr_9) 
+iNsTr_219 := (iNsTr_218 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010010 ) )
+->(iNsTr_2) := iNsTr_219
+// load 
+iNsTr_221 := ->(iNsTr_10) 
+iNsTr_222 := (iNsTr_221 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010101 ) )
+->(iNsTr_3) := iNsTr_222
+// load 
+iNsTr_224 := ->(iNsTr_11) 
+iNsTr_225 := (iNsTr_224 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010110 ) )
+->(iNsTr_4) := iNsTr_225
+// load 
+iNsTr_227 := ->(iNsTr_2) 
+// load 
+iNsTr_228 := ->(iNsTr_3) 
+iNsTr_229 := (iNsTr_227 ^ iNsTr_228)
+->(iNsTr_2) := iNsTr_229
+// load 
+iNsTr_231 := ->(iNsTr_2) 
+// load 
+iNsTr_232 := ->(iNsTr_4) 
+iNsTr_233 := (iNsTr_231 ^ iNsTr_232)
+->(iNsTr_2) := iNsTr_233
+// load 
+iNsTr_235 := ->(iNsTr_2) 
+iNsTr_236 := (iNsTr_235 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+->(iNsTr_2) := iNsTr_236
+// load 
+iNsTr_238 := ->(iNsTr_9) 
+R1 := iNsTr_238
+// load 
+iNsTr_240 := ->(iNsTr_10) 
+R2 := iNsTr_240
+// load 
+iNsTr_242 := ->(iNsTr_11) 
+R3 := iNsTr_242
+// load 
+ret_val__ := ->(iNsTr_2) 
+$place [return__]
+$merge return__ $endmerge
+}
+}
+$module [initreg] 
+ $in ()
+ $out ()
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<8>
+$storage iNsTr_1_alloc : $uint<8>
+$storage iNsTr_2_alloc : $uint<8>
+$storage iNsTr_3_alloc : $uint<8>
+$storage iNsTr_4_alloc : $uint<8>
+$storage iNsTr_5_alloc : $uint<32>
+$storage iNsTr_6_alloc : $uint<32>
+$storage iNsTr_7_alloc : $uint<32>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+iNsTr_3 := @(iNsTr_3_alloc)
+iNsTr_4 := @(iNsTr_4_alloc)
+iNsTr_5 := @(iNsTr_5_alloc)
+iNsTr_6 := @(iNsTr_6_alloc)
+iNsTr_7 := @(iNsTr_7_alloc)
+// load 
+iNsTr_8 := R1
+->(iNsTr_5) := iNsTr_8
+// load 
+iNsTr_10 := R2
+->(iNsTr_6) := iNsTr_10
+// load 
+iNsTr_12 := R3
+->(iNsTr_7) := iNsTr_12
+// load 
+iNsTr_14 := ->(iNsTr_5) 
+iNsTr_15 := (iNsTr_14 & ( $bitcast ($uint<32> ) _b00000000000001000000000000000000 ) )
+iNsTr_16 := (iNsTr_15 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010010 ) )
+iNsTr_17 := ($cast ($uint<8>) iNsTr_16)
+->(iNsTr_1) := iNsTr_17
+// load 
+iNsTr_19 := ->(iNsTr_5) 
+iNsTr_20 := (iNsTr_19 & ( $bitcast ($uint<32> ) _b00000000000000100000000000000000 ) )
+iNsTr_21 := (iNsTr_20 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010001 ) )
+iNsTr_22 := ($cast ($uint<8>) iNsTr_21)
+->(iNsTr_2) := iNsTr_22
+// load 
+iNsTr_24 := ->(iNsTr_5) 
+iNsTr_25 := (iNsTr_24 & ( $bitcast ($uint<32> ) _b00000000000000010000000000000000 ) )
+iNsTr_26 := (iNsTr_25 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010000 ) )
+iNsTr_27 := ($cast ($uint<8>) iNsTr_26)
+->(iNsTr_3) := iNsTr_27
+// load 
+iNsTr_29 := ->(iNsTr_5) 
+iNsTr_30 := (iNsTr_29 & ( $bitcast ($uint<32> ) _b00000000000000000010000000000000 ) )
+iNsTr_31 := (iNsTr_30 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000001101 ) )
+iNsTr_32 := ($cast ($uint<8>) iNsTr_31)
+->(iNsTr_4) := iNsTr_32
+// load 
+iNsTr_34 := ->(iNsTr_5) 
+iNsTr_35 := (iNsTr_34 << ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_36 := (iNsTr_35 & ( $bitcast ($uint<32> ) _b00000000000001111111111111111111 ) )
+->(iNsTr_5) := iNsTr_36
+// load 
+iNsTr_38 := ->(iNsTr_1) 
+iNsTr_39 := ($cast ($uint<32>) iNsTr_38)
+// load 
+iNsTr_40 := ->(iNsTr_2) 
+iNsTr_41 := ($cast ($uint<32>) iNsTr_40)
+iNsTr_42 := (iNsTr_39 ^ iNsTr_41)
+// load 
+iNsTr_43 := ->(iNsTr_3) 
+iNsTr_44 := ($cast ($uint<32>) iNsTr_43)
+iNsTr_45 := (iNsTr_42 ^ iNsTr_44)
+// load 
+iNsTr_46 := ->(iNsTr_4) 
+iNsTr_47 := ($cast ($uint<32>) iNsTr_46)
+iNsTr_48 := (iNsTr_45 ^ iNsTr_47)
+// load 
+iNsTr_49 := ->(iNsTr_5) 
+iNsTr_50 := (iNsTr_49 | iNsTr_48)
+->(iNsTr_5) := iNsTr_50
+// load 
+iNsTr_52 := ->(iNsTr_6) 
+iNsTr_53 := (iNsTr_52 & ( $bitcast ($uint<32> ) _b00000000001000000000000000000000 ) )
+iNsTr_54 := (iNsTr_53 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010101 ) )
+iNsTr_55 := ($cast ($uint<8>) iNsTr_54)
+->(iNsTr_1) := iNsTr_55
+// load 
+iNsTr_57 := ->(iNsTr_6) 
+iNsTr_58 := (iNsTr_57 & ( $bitcast ($uint<32> ) _b00000000000100000000000000000000 ) )
+iNsTr_59 := (iNsTr_58 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010100 ) )
+iNsTr_60 := ($cast ($uint<8>) iNsTr_59)
+->(iNsTr_2) := iNsTr_60
+// load 
+iNsTr_62 := ->(iNsTr_6) 
+iNsTr_63 := (iNsTr_62 << ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_64 := (iNsTr_63 & ( $bitcast ($uint<32> ) _b00000000001111111111111111111111 ) )
+->(iNsTr_6) := iNsTr_64
+// load 
+iNsTr_66 := ->(iNsTr_1) 
+iNsTr_67 := ($cast ($uint<32>) iNsTr_66)
+// load 
+iNsTr_68 := ->(iNsTr_2) 
+iNsTr_69 := ($cast ($uint<32>) iNsTr_68)
+iNsTr_70 := (iNsTr_67 ^ iNsTr_69)
+// load 
+iNsTr_71 := ->(iNsTr_6) 
+iNsTr_72 := (iNsTr_71 | iNsTr_70)
+->(iNsTr_6) := iNsTr_72
+// load 
+iNsTr_74 := ->(iNsTr_7) 
+iNsTr_75 := (iNsTr_74 & ( $bitcast ($uint<32> ) _b00000000010000000000000000000000 ) )
+iNsTr_76 := (iNsTr_75 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010110 ) )
+iNsTr_77 := ($cast ($uint<8>) iNsTr_76)
+->(iNsTr_1) := iNsTr_77
+// load 
+iNsTr_79 := ->(iNsTr_7) 
+iNsTr_80 := (iNsTr_79 & ( $bitcast ($uint<32> ) _b00000000001000000000000000000000 ) )
+iNsTr_81 := (iNsTr_80 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010101 ) )
+iNsTr_82 := ($cast ($uint<8>) iNsTr_81)
+->(iNsTr_2) := iNsTr_82
+// load 
+iNsTr_84 := ->(iNsTr_7) 
+iNsTr_85 := (iNsTr_84 & ( $bitcast ($uint<32> ) _b00000000000100000000000000000000 ) )
+iNsTr_86 := (iNsTr_85 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000010100 ) )
+iNsTr_87 := ($cast ($uint<8>) iNsTr_86)
+->(iNsTr_3) := iNsTr_87
+// load 
+iNsTr_89 := ->(iNsTr_7) 
+iNsTr_90 := (iNsTr_89 & ( $bitcast ($uint<32> ) _b00000000000000000000000010000000 ) )
+iNsTr_91 := (iNsTr_90 >> ( $bitcast ($uint<32> ) _b00000000000000000000000000000111 ) )
+iNsTr_92 := ($cast ($uint<8>) iNsTr_91)
+->(iNsTr_4) := iNsTr_92
+// load 
+iNsTr_94 := ->(iNsTr_7) 
+iNsTr_95 := (iNsTr_94 << ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+iNsTr_96 := (iNsTr_95 & ( $bitcast ($uint<32> ) _b00000000011111111111111111111111 ) )
+->(iNsTr_7) := iNsTr_96
+// load 
+iNsTr_98 := ->(iNsTr_1) 
+iNsTr_99 := ($cast ($uint<32>) iNsTr_98)
+// load 
+iNsTr_100 := ->(iNsTr_2) 
+iNsTr_101 := ($cast ($uint<32>) iNsTr_100)
+iNsTr_102 := (iNsTr_99 ^ iNsTr_101)
+// load 
+iNsTr_103 := ->(iNsTr_3) 
+iNsTr_104 := ($cast ($uint<32>) iNsTr_103)
+iNsTr_105 := (iNsTr_102 ^ iNsTr_104)
+// load 
+iNsTr_106 := ->(iNsTr_4) 
+iNsTr_107 := ($cast ($uint<32>) iNsTr_106)
+iNsTr_108 := (iNsTr_105 ^ iNsTr_107)
+// load 
+iNsTr_109 := ->(iNsTr_7) 
+iNsTr_110 := (iNsTr_109 | iNsTr_108)
+->(iNsTr_7) := iNsTr_110
+// load 
+iNsTr_112 := ->(iNsTr_5) 
+R1 := iNsTr_112
+// load 
+iNsTr_114 := ->(iNsTr_6) 
+R2 := iNsTr_114
+// load 
+iNsTr_116 := ->(iNsTr_7) 
+R3 := iNsTr_116
+$place [return__]
+$merge return__ $endmerge
+}
+}
+$module [a5init] 
+ $in ()
+ $out ()
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<8>
+$storage iNsTr_1_alloc : $uint<32>
+$storage iNsTr_2_alloc : $uint<32>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+->(iNsTr_0) := ( $bitcast ($uint<8> ) _b00000000 ) 
+$place [bb_0_bb_1]
+//begin: basic-block bb_1
+$merge bb_0_bb_1 bb_3_bb_1
+$endmerge
+// load 
+iNsTr_5 := ->(iNsTr_0) 
+iNsTr_6 := ($cast ($uint<32>) iNsTr_5)
+// compare instruction
+iNsTr_7 := ( ($bitcast ( $int<32>) iNsTr_6) <   ($bitcast ( $int<32>) ( $bitcast ($uint<32> ) _b00000000000000000000000001000000 )  ) )
+$if iNsTr_7 $then  $place [bb_1_bb_2] $else $place [bb_1_bb_4] $endif 
+//begin: basic-block bb_2
+$merge bb_1_bb_2
+$endmerge
+// load 
+iNsTr_9 := ->(iNsTr_0) 
+iNsTr_10 := ($cast ($uint<32>) iNsTr_9)
+iNsTr_11 :=  ($bitcast ($uint<32>) ( ($bitcast ( $int<32>) iNsTr_10) >>  ($bitcast ( $int<32>) ( $bitcast ($uint<32> ) _b00000000000000000000000000000101 )  )))
+iNsTr_12 :=  ($bitcast ($uint<64>) ( $cast ($int< 64 > ) iNsTr_11) )
+iNsTr_13 := @(key[iNsTr_12])
+// load 
+iNsTr_14 := ->(iNsTr_13) 
+// load 
+iNsTr_15 := ->(iNsTr_0) 
+iNsTr_16 := ($cast ($uint<32>) iNsTr_15)
+iNsTr_17 := (iNsTr_16 & ( $bitcast ($uint<32> ) _b00000000000000000000000000011111 ) )
+iNsTr_18 := (iNsTr_14 >> iNsTr_17)
+iNsTr_19 := (iNsTr_18 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+->(iNsTr_1) := iNsTr_19
+// load 
+iNsTr_21 := ->(iNsTr_1) 
+// load 
+iNsTr_22 := R1
+iNsTr_23 := (iNsTr_22 ^ iNsTr_21)
+R1 := iNsTr_23
+// load 
+iNsTr_25 := ->(iNsTr_1) 
+// load 
+iNsTr_26 := R2
+iNsTr_27 := (iNsTr_26 ^ iNsTr_25)
+R2 := iNsTr_27
+// load 
+iNsTr_29 := ->(iNsTr_1) 
+// load 
+iNsTr_30 := R3
+iNsTr_31 := (iNsTr_30 ^ iNsTr_29)
+R3 := iNsTr_31
+$call initreg ()  ()
+$place [bb_2_bb_3]
+//begin: basic-block bb_3
+$merge bb_2_bb_3
+$endmerge
+// load 
+iNsTr_37 := ->(iNsTr_0) 
+iNsTr_38 := (iNsTr_37 + ( $bitcast ($uint<8> ) _b00000001 ) )
+->(iNsTr_0) := iNsTr_38
+$place [bb_3_bb_1]
+//begin: basic-block bb_4
+$merge bb_1_bb_4
+$endmerge
+->(iNsTr_0) := ( $bitcast ($uint<8> ) _b00000000 ) 
+$place [bb_4_bb_5]
+//begin: basic-block bb_5
+$merge bb_4_bb_5 bb_7_bb_5
+$endmerge
+// load 
+iNsTr_41 := ->(iNsTr_0) 
+iNsTr_42 := ($cast ($uint<32>) iNsTr_41)
+// compare instruction
+iNsTr_43 := ( ($bitcast ( $int<32>) iNsTr_42) <   ($bitcast ( $int<32>) ( $bitcast ($uint<32> ) _b00000000000000000000000000010110 )  ) )
+$if iNsTr_43 $then  $place [bb_5_bb_6] $else $place [bb_5_bb_8] $endif 
+//begin: basic-block bb_6
+$merge bb_5_bb_6
+$endmerge
+// load 
+iNsTr_45 := frame
+// load 
+iNsTr_46 := ->(iNsTr_0) 
+iNsTr_47 := ($cast ($uint<32>) iNsTr_46)
+iNsTr_48 := (iNsTr_45 >> iNsTr_47)
+iNsTr_49 := (iNsTr_48 & ( $bitcast ($uint<32> ) _b00000000000000000000000000000001 ) )
+->(iNsTr_2) := iNsTr_49
+// load 
+iNsTr_51 := ->(iNsTr_2) 
+// load 
+iNsTr_52 := R1
+iNsTr_53 := (iNsTr_52 ^ iNsTr_51)
+R1 := iNsTr_53
+// load 
+iNsTr_55 := ->(iNsTr_2) 
+// load 
+iNsTr_56 := R2
+iNsTr_57 := (iNsTr_56 ^ iNsTr_55)
+R2 := iNsTr_57
+// load 
+iNsTr_59 := ->(iNsTr_2) 
+// load 
+iNsTr_60 := R3
+iNsTr_61 := (iNsTr_60 ^ iNsTr_59)
+R3 := iNsTr_61
+$call initreg ()  ()
+$place [bb_6_bb_7]
+//begin: basic-block bb_7
+$merge bb_6_bb_7
+$endmerge
+// load 
+iNsTr_67 := ->(iNsTr_0) 
+iNsTr_68 := (iNsTr_67 + ( $bitcast ($uint<8> ) _b00000001 ) )
+->(iNsTr_0) := iNsTr_68
+$place [bb_7_bb_5]
+//begin: basic-block bb_8
+$merge bb_5_bb_8
+$endmerge
+->(iNsTr_0) := ( $bitcast ($uint<8> ) _b00000000 ) 
+$place [bb_8_bb_9]
+//begin: basic-block bb_9
+$merge bb_11_bb_9 bb_8_bb_9
+$endmerge
+// load 
+iNsTr_71 := ->(iNsTr_0) 
+iNsTr_72 := ($cast ($uint<32>) iNsTr_71)
+// compare instruction
+iNsTr_73 := ( ($bitcast ( $int<32>) iNsTr_72) <   ($bitcast ( $int<32>) ( $bitcast ($uint<32> ) _b00000000000000000000000001100100 )  ) )
+$if iNsTr_73 $then  $place [bb_9_bb_10] $else $place [bb_9_bb_12] $endif 
+//begin: basic-block bb_10
+$merge bb_9_bb_10
+$endmerge
+$call a5reg ()  (iNsTr_75)
+$place [bb_10_bb_11]
+//begin: basic-block bb_11
+$merge bb_10_bb_11
+$endmerge
+// load 
+iNsTr_78 := ->(iNsTr_0) 
+iNsTr_79 := (iNsTr_78 + ( $bitcast ($uint<8> ) _b00000001 ) )
+->(iNsTr_0) := iNsTr_79
+$place [bb_11_bb_9]
+//begin: basic-block bb_12
+$merge bb_9_bb_12
+$endmerge
+$place [return__]
+$merge return__ $endmerge
+}
+}
+$module [main] 
+ $in ()
+ $out (ret_val__ : $uint<32>)
+ $is 
+{
+$branchblock [body] {
+//begin: basic-block bb_0
+$storage iNsTr_0_alloc : $uint<32>
+$storage iNsTr_1_alloc : $uint<8>
+$storage iNsTr_2_alloc : $uint<32>
+iNsTr_0 := @(iNsTr_0_alloc)
+iNsTr_1 := @(iNsTr_1_alloc)
+iNsTr_2 := @(iNsTr_2_alloc)
+->(iNsTr_0) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+->(iNsTr_2) := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+R3 := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+R2 := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+R1 := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+frame := ( $bitcast ($uint<32> ) _b00000000000000000000000000000000 ) 
+key := ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) 
+->(getelementptr) := ( $bitcast ($uint<32> ) _b11111111111111111111111111111111 ) 
+$call a5init ()  ()
+->(iNsTr_1) := ( $bitcast ($uint<8> ) _b00000000 ) 
+$place [bb_0_bb_1]
+//begin: basic-block bb_1
+$merge bb_0_bb_1 bb_3_bb_1
+$endmerge
+// load 
+iNsTr_14 := ->(iNsTr_1) 
+iNsTr_15 := ($cast ($uint<32>) iNsTr_14)
+// compare instruction
+iNsTr_16 := ( ($bitcast ( $int<32>) iNsTr_15) <   ($bitcast ( $int<32>) ( $bitcast ($uint<32> ) _b00000000000000000000000000100000 )  ) )
+$if iNsTr_16 $then  $place [bb_1_bb_2] $else $place [bb_1_bb_4] $endif 
+//begin: basic-block bb_2
+$merge bb_1_bb_2
+$endmerge
+$call a5reg ()  (iNsTr_18)
+// load 
+iNsTr_19 := ->(iNsTr_1) 
+iNsTr_20 := ($cast ($uint<32>) iNsTr_19)
+iNsTr_21 := (iNsTr_20 & ( $bitcast ($uint<32> ) _b00000000000000000000000000011111 ) )
+iNsTr_22 := (( $bitcast ($uint<32> ) _b00000000000000000000000000011111 )  - iNsTr_21)
+iNsTr_23 := (iNsTr_18 << iNsTr_22)
+// load 
+iNsTr_24 := ->(iNsTr_2) 
+iNsTr_25 := (iNsTr_24 | iNsTr_23)
+->(iNsTr_2) := iNsTr_25
+$place [bb_2_bb_3]
+//begin: basic-block bb_3
+$merge bb_2_bb_3
+$endmerge
+// load 
+iNsTr_30 := ->(iNsTr_1) 
+iNsTr_31 := (iNsTr_30 + ( $bitcast ($uint<8> ) _b00000001 ) )
+->(iNsTr_1) := iNsTr_31
+$place [bb_3_bb_1]
+//begin: basic-block bb_4
+$merge bb_1_bb_4
+$endmerge
+// load 
+ret_val__ := ->(iNsTr_2) 
+$place [return__]
+$merge return__ $endmerge
+}
+}
